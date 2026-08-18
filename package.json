@@ -1,0 +1,31 @@
+{
+  "name": "@kivox/sdk",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "lint": "oxlint --type-aware .",
+    "lint:fix": "oxlint --type-aware --fix .",
+    "fmt": "oxfmt .",
+    "fmt:check": "oxfmt --check .",
+    "check": "oxlint --type-aware . && oxfmt --check .",
+    "generate": "bun run ./scripts/generate.ts",
+    "release": "bun run ./scripts/release.ts"
+  },
+  "dependencies": {
+    "@azure/storage-blob": "^12.33.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "openapi-fetch": "^0.17.0",
+    "openapi-typescript": "^7.13.0",
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
+    "oxlint-tsgolint": "^7.0.2001"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.5.0"
+  }
+}
