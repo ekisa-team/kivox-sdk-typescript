@@ -1,4 +1,5 @@
-![JSR Version](https://img.shields.io/jsr/v/@kivox/sdk)
+[![JSR](https://jsr.io/badges/@kivox/sdk)](https://jsr.io/@kivox/sdk)
+[![JSR Score](https://jsr.io/badges/@kivox/sdk/score)](https://jsr.io/@kivox/sdk)
 
 # Kivox TypeScript SDK
 
