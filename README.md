@@ -2,7 +2,7 @@
 
 # Kivox TypeScript SDK
 
-Official TypeScript SDK for interacting with the [Kivox](https://kivox.com.co) API.
+Official TypeScript SDK for interacting with the Kivox API.
 
 Typed HTTP client generated from the OpenAPI contract, plus utilities for SSE streaming and file transfer.
 

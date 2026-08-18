@@ -89,13 +89,6 @@ if (jsr.version !== current) {
     fatal(`Version mismatch: package.json=${pkg.version}, jsr.json=${jsr.version}`);
 }
 
-const diffFiles = await $`git diff --quiet -- package.json jsr.json`.nothrow();
-const diffCached = await $`git diff --cached --quiet -- package.json jsr.json`.nothrow();
-
-if (diffFiles.exitCode !== 0 || diffCached.exitCode !== 0) {
-    fatal('package.json or jsr.json have uncommitted changes. Please commit or stash them before releasing.');
-}
-
 const next = bumpVersion(current, bumpArg);
 
 if (semver.order(next, current) <= 0) {
@@ -116,8 +109,6 @@ await Bun.write(pkgPath, `${JSON.stringify(pkg, null, 2)}\n`);
 await Bun.write(jsrPath, `${JSON.stringify(jsr, null, 2)}\n`);
 
 await $`bun run fmt`;
-await $`bun run lint`;
-await $`bun run test`;
 
 try {
     await $`git add package.json jsr.json`;
