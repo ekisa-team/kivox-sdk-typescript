@@ -1,13 +1,21 @@
 {
   "name": "@kivox/sdk",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "exports": {
     ".": "./src/index.ts",
     "./sse": "./src/sse/index.ts",
     "./files": "./src/files/index.ts"
   },
   "publish": {
-    "include": ["src/**/*.ts", "README.md", "jsr.json", "LICENSE"],
-    "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"]
+    "include": [
+      "src/**/*.ts",
+      "README.md",
+      "jsr.json",
+      "LICENSE"
+    ],
+    "exclude": [
+      "src/**/*.test.ts",
+      "src/**/*.test.tsx"
+    ]
   }
 }
