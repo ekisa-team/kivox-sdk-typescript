@@ -1,6 +1,6 @@
 {
   "name": "@kivox/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Official TypeScript SDK for interacting with the Kivox API.",
   "type": "module",
