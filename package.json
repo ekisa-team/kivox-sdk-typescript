@@ -2,6 +2,7 @@
   "name": "@kivox/sdk",
   "version": "0.1.0",
   "private": true,
+  "description": "Official TypeScript SDK for interacting with the Kivox API.",
   "type": "module",
   "scripts": {
     "test": "bun test",

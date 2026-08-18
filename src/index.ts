@@ -1,4 +1,10 @@
-import createClient, { type Client as OpenapiClient, type ClientOptions } from 'openapi-fetch';
+/**
+ * @module
+ * The core entrypoint for the @kivox/sdk.
+ * Provides the main client and fundamental schemas for interacting with the API.
+ */
+
+import createClient, { type ClientOptions, type Client as OpenapiClient } from 'openapi-fetch';
 import type { paths } from './codegen/api';
 
 const DEFAULT_BASE_URL = 'https://server.kivox.com.co';
@@ -78,6 +84,6 @@ export class Kivox {
     }
 }
 
-export type { paths, components, operations } from './codegen/api';
+export type { components, operations, paths } from './codegen/api';
 
 export * from './schemas';
