@@ -7,15 +7,7 @@
     "./files": "./src/files/index.ts"
   },
   "publish": {
-    "include": [
-      "src/**/*.ts",
-      "README.md",
-      "jsr.json",
-      "LICENSE"
-    ],
-    "exclude": [
-      "src/**/*.test.ts",
-      "src/**/*.test.tsx"
-    ]
+    "include": ["src/**/*.ts", "README.md", "jsr.json", "LICENSE"],
+    "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"]
   }
 }

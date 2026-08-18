@@ -12,10 +12,28 @@ jobs:
       contents: write
       id-token: write
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: package.json
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Check formatting
+        run: bun run fmt:check
+
+      - name: Lint
+        run: bun run lint
+
+      - name: Test
+        run: bun test
 
       - name: Publish package
-        run: npx jsr publish
+        run: bunx jsr publish
 
       - name: Create GitHub Release
         env:

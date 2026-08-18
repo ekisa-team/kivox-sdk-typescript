@@ -16,7 +16,7 @@
         "oxlint-tsgolint": "^7.0.2001",
       },
       "peerDependencies": {
-        "typescript": "^6",
+        "typescript": ">=5.5.0",
       },
     },
   },

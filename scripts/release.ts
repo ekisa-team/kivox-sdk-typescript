@@ -115,6 +115,10 @@ jsr.version = next;
 await Bun.write(pkgPath, `${JSON.stringify(pkg, null, 2)}\n`);
 await Bun.write(jsrPath, `${JSON.stringify(jsr, null, 2)}\n`);
 
+await $`bun run fmt`;
+await $`bun run lint`;
+await $`bun run test`;
+
 try {
     await $`git add package.json jsr.json`;
 } catch {
